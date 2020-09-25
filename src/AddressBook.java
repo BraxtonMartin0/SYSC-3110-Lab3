@@ -7,12 +7,17 @@ public class AddressBook {
         }
     }
 
-    public void removeBuddy(int i){
-        list[i] = null;
+    public void removeBuddy(BuddyInfo buddy){
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == buddy) list[i] = null;
+        }
     }
 
     public static void main(String[] args) {
-        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("tom", "Carleton", "613");
+        AddressBook addressbook = new AddressBook();
+        addressbook.addBuddy(buddy);
+        addressbook.removeBuddy(buddy);
     }
 }
 
