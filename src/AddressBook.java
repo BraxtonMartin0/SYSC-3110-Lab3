@@ -1,16 +1,13 @@
+import java.util.*;
 public class AddressBook {
-    BuddyInfo[] list = new BuddyInfo[5];
+    ArrayList<BuddyInfo> list;
 
     public void addBuddy(BuddyInfo buddy) {
-        for (int i = 0; i < list.length; i++) {
-            if (list[i] == null) list[i] = buddy;
-        }
+        list.add(buddy);
     }
 
     public void removeBuddy(BuddyInfo buddy){
-        for (int i = 0; i < list.length; i++) {
-            if (list[i] == buddy) list[i] = null;
-        }
+        list.remove(buddy);
     }
 
     public static void main(String[] args) {
