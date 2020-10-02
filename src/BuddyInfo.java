@@ -22,7 +22,7 @@ public class BuddyInfo {
 
     public static void main(String[] args) {
         BuddyInfo myBuddy = new BuddyInfo("homer",null, null);
-        myBuddy.name = "Homerr";
+        myBuddy.name = "Homer";
         System.out.println("Hello " + myBuddy.getName());
     }
 }
